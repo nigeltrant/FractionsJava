@@ -11,9 +11,9 @@ public class Fraction {
         return new Fraction(this.integerValue + that.integerValue);
     }
 
-//    public Fraction minus(Fraction that){
-//        return new Fraction(this.integerValue - that.integerValue);
-//    }
+    public Fraction minus(Fraction that){
+        return new Fraction(this.integerValue - that.integerValue);
+    }
 
     public int intValue(){
         return integerValue;
