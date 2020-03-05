@@ -38,7 +38,7 @@ public class AddFractionsTest {
     }
 
     @Test
-    public void differentDenominators() {
+    public void differentDenominatorsWithoutReducing() {
         Assert.assertEquals(new Fraction(5,6), new Fraction(1,2).plus(new Fraction(1,3)));
     }
 }
