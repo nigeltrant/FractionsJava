@@ -19,5 +19,15 @@ public class FractionEqualsTest {
     public void differentDenominators() {
         Assert.assertNotEquals(new Fraction(3,4), new Fraction(3,7));
     }
+
+    @Test
+    public void wholeNumbersEqualsSameFraction() {
+        Assert.assertEquals(new Fraction(5,1), new Fraction(5));
+    }
+
+    @Test
+    public void wholeNumberNotEqualToDifferentWholeNumber() {
+        Assert.assertNotEquals(new Fraction(6), new Fraction(5));
+    }
 }
 
