@@ -6,8 +6,10 @@ import org.testng.annotations.Test;
 public class GreatestCommDivisorTest {
 
     @Test
-    public void oneAndOne () {
+    public void reflexive () {
         Assert.assertEquals(1, gcd(1,1));
+        Assert.assertEquals(2, gcd(2,2));
+        Assert.assertEquals(-1, gcd(-1,-1));
     }
 
     private int gcd(int a, int b){
