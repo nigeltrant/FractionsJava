@@ -16,4 +16,9 @@ public class ReduceFractionTest {
     public void reduceToNotWholeNumber() {
         Assert.assertEquals(new Fraction(3,4), new Fraction(6,8));
     }
+
+    @Test
+    public void reduceToWhoNumber() {
+        Assert.assertEquals(new Fraction(6), new Fraction(24,4));
+    }
 }
