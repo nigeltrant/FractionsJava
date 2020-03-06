@@ -21,4 +21,9 @@ public class ReduceFractionTest {
     public void reduceToWhoNumber() {
         Assert.assertEquals(new Fraction(6), new Fraction(24,4));
     }
+
+    @Test
+    public void reduceZero() {
+        Assert.assertEquals(new Fraction(0), new Fraction(0,172635));
+    }
 }
