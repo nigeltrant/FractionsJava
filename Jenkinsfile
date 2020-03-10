@@ -1,10 +1,13 @@
-node {
-  stage('SCM Checkout'){
-    git 'https://github.com/nigeltrant/FractionsJava'
-  }
+pipeline{
+  agent any
   
-  stage('Compile-Package'){
-    def mvnHome = tool name: 'mavan_3_6_3', type: 'maven'
-    sh 'mvn package'
+  stages{
+    stage('Compile Stage'){
+      steps{
+        withMaven(maven: 'maven_3_6_3'){
+          sh 'mvn clean compile'
+        }
+      }
+    }
   }
 }
