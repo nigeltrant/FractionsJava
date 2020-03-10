@@ -4,7 +4,7 @@ pipeline{
   stages{
     stage('Compile Stage'){
       steps{
-        withMaven(maven: 'maven_3_5_2'){
+        tool name: 'mavan_3_5_2', type: 'maven'{
           sh 'mvn clean compile'
         }
       }
@@ -12,14 +12,14 @@ pipeline{
     
    stage('Testing Stage'){
      steps{
-       withMaven(maven:'maven_3_5_2'){
+       tool name: 'mavan_3_5_2', type: 'maven'{
          sh 'mvn test'
         }
       }
     }
    stage('Deployment Stage'){
      steps{
-       withMaven(maven:'maven_3_5_2'){
+       tool name: 'mavan_3_5_2', type: 'maven'{
          sh 'mvn deploy'
         }
       }
