@@ -1,8 +1,6 @@
 node{
   stage('SCM Checkout'){
     git 'https://github.com/nigeltrant/FractionsJava'
-    username 'nigel73'
-    password 'Tralee1973'
   }
   
   stage('Compile-Package'){
