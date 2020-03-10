@@ -1,6 +1,6 @@
 node{
   stage('SCM Checkout'){
-    git 'https://github.com/nigeltrant/FractionsJava.git'
+    git 'https://github.com/nigeltrant/FractionsJava'
   }
   
   stage('Compile-Package'){
